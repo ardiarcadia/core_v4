@@ -21,7 +21,7 @@ class Gen_modul extends CI_Controller {
     	$data = trim($data);
 		$data = stripslashes($data);
 		$data = htmlspecialchars($data);
-        return preg_replace("/[^a-zA-Z0-9]/", "", $data);
+        return preg_replace("/[^a-zA-Z0-9_]/", "", $data);
     }
 
     function list_dir_ctrl()
@@ -74,49 +74,57 @@ class Gen_modul extends CI_Controller {
             );
 
             if($this->check_dir_folder($folder_name)){
-                $path1 = 'app/controllers/'.$folder_name;
-                $path2 = 'app/views/'.$folder_name;
-                $path3 = 'src/js/'.$folder_name;
-                
-                if(!is_dir($path1)){
-                    mkdir($path1, 0777, true);
-                }
-                
-                if(!is_dir($path2)){
-                    mkdir($path2, 0777, true);
-                }
-                
-                if(!is_dir($path3)){
-                    mkdir($path3, 0777, true);
-                }
-
-                if(!is_dir($path2.'/'.$file_name)){
-                    mkdir($path2.'/'.$file_name, 0777, true);
-                }
                 
                 $dir_tpl = 'app/views/admin/gen_modul/';
-                $dir_l   = 'app/libraries/';
-                $dir_m   = 'app/models/';
+                $path_c = 'app/controllers/'.$folder_name;
+                $path_m = 'app/models/'.$folder_name;
+                $path_l = 'app/libraries/'.$folder_name;
+                $path_v = 'app/views/'.$folder_name;
+                $path_j = 'src/js/'.$folder_name;
+                
+                if(!is_dir($path_c)){
+                    mkdir($path_c, 0777, true);
+                }
+                
+                if(!is_dir($path_m)){
+                    mkdir($path_m, 0777, true);
+                }
+                
+                if(!is_dir($path_l)){
+                    mkdir($path_l, 0777, true);
+                }
+                
+                if(!is_dir($path_v)){
+                    mkdir($path_v, 0777, true);
+                }
+                
+                if(!is_dir($path_j)){
+                    mkdir($path_j, 0777, true);
+                }
+
+                if(!is_dir($path_v.'/'.$file_name)){
+                    mkdir($path_v.'/'.$file_name, 0777, true);
+                }
 
                 $tpl_controllers = $dir_tpl.'tpl_controllers.php';
-                $new_c           = $path1.'/'.ucwords($file_name).'.php';
+                $new_c           = $path_c.'/'.ucwords($file_name).'.php';
                 copy($tpl_controllers, $new_c);
 
-                $tpl_views = $dir_tpl.'tpl_views.php';
-                $new_v     = $path2.'/'.$file_name.'/view.php';
-                copy($tpl_views, $new_v);
-
                 $tpl_models = $dir_tpl.'tpl_models.php';
-                $new_m      = $dir_m.'M_'.$file_name.'.php';
+                $new_m      = $path_m.'/M_'.$file_name.'.php';
                 copy($tpl_models, $new_m);
 
                 $tpl_libraries = $dir_tpl.'tpl_libraries.php';
-                $new_l         = $dir_l.'L_'.$file_name.'.php';
+                $new_l         = $path_l.'/L_'.$file_name.'.php';
                 copy($tpl_libraries, $new_l);
+
+                $tpl_views = $dir_tpl.'tpl_views.php';
+                $new_v     = $path_v.'/'.$file_name.'/view.php';
+                copy($tpl_views, $new_v);
 
                 
                 $tpl_javascript = $dir_tpl.'tpl_javascript.js';
-                $new_j          = $path3.'/'.$file_name.'.js';
+                $new_j          = $path_j.'/'.$file_name.'.js';
                 copy($tpl_javascript, $new_j);
 
                 $notif['notif']  = 'Main Modul dan Sub Modul baru berhasil dibuat !';
@@ -149,30 +157,56 @@ class Gen_modul extends CI_Controller {
                 )
             );
 
-            $path1 = 'app/controllers/'.$folder_name;
-            $path2 = 'app/views/'.$folder_name;
-            $path3 = 'src/js/'.$folder_name;
-
-            if(!is_dir($path2.'/'.$file_name)){
-                mkdir($path2.'/'.$file_name, 0777, true);
-            }
-
-            if(!is_dir($path3)){
-                mkdir($path3, 0777, true);
-            }
-
             $dir_tpl = 'app/views/admin/gen_modul/';
+            $path_c = 'app/controllers/'.$folder_name;
+            $path_m = 'app/models/'.$folder_name;
+            $path_l = 'app/libraries/'.$folder_name;
+            $path_v = 'app/views/'.$folder_name;
+            $path_j = 'src/js/'.$folder_name;
+
+            if(!is_dir($path_c)){
+                mkdir($path_c, 0777, true);
+            }
+            
+            if(!is_dir($path_m)){
+                mkdir($path_m, 0777, true);
+            }
+            
+            if(!is_dir($path_l)){
+                mkdir($path_l, 0777, true);
+            }
+            
+            if(!is_dir($path_v)){
+                mkdir($path_v, 0777, true);
+            }
+            
+            if(!is_dir($path_j)){
+                mkdir($path_j, 0777, true);
+            }
+
+            if(!is_dir($path_v.'/'.$file_name)){
+                mkdir($path_v.'/'.$file_name, 0777, true);
+            }
 
             $tpl_controllers = $dir_tpl.'tpl_controllers.php';
-            $new_c           = $path1.'/'.ucwords($file_name).'.php';
+            $new_c           = $path_c.'/'.ucwords($file_name).'.php';
             copy($tpl_controllers, $new_c);
 
+            $tpl_models = $dir_tpl.'tpl_models.php';
+            $new_m      = $path_m.'/M_'.$file_name.'.php';
+            copy($tpl_models, $new_m);
+
+            $tpl_libraries = $dir_tpl.'tpl_libraries.php';
+            $new_l         = $path_l.'/L_'.$file_name.'.php';
+            copy($tpl_libraries, $new_l);
+
             $tpl_views = $dir_tpl.'tpl_views.php';
-            $new_v     = $path2.'/'.$file_name.'/view.php';
+            $new_v     = $path_v.'/'.$file_name.'/view.php';
             copy($tpl_views, $new_v);
 
+            
             $tpl_javascript = $dir_tpl.'tpl_javascript.js';
-            $new_j          = $path3.'/'.$file_name.'.js';
+            $new_j          = $path_j.'/'.$file_name.'.js';
             copy($tpl_javascript, $new_j);
 
             $notif['notif']  = 'Sub Modul baru berhasil dibuat !';

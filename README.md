@@ -35,15 +35,17 @@ Aturan ini dibuat untuk mempermudah dalam proses development, maintenance serta 
 
     1.  Generate Main Modul :
         1. app/controllers/**Nama_Folder**/**Nama_File**.php
-        2. app/models/M_**Nama_Folder**.php
-        3. app/libraries/L_**Nama_Folder**.php
+        2. app/models/**Nama_Folder**/M_**Nama_Folder**.php
+        3. app/libraries/**Nama_Folder**/L_**Nama_Folder**.php
         4. app/views/**Nama_Folder**/**Nama_File**/view.php
         5. src/js/**Nama_Folder**/**Nama_File**.js
 
     2.  Generate Sub Modul :
         1. app/controllers/**Nama_Folder**/**Nama_File**.php
-        2. app/views/**Nama_Folder**/**Nama_File**/view.php
-        3. src/js/**Nama_Folder**/**Nama_File**.js
+        2. app/models/**Nama_Folder**/M_**Nama_Folder**.php
+        3. app/libraries/**Nama_Folder**/L_**Nama_Folder**.php
+        4. app/views/**Nama_Folder**/**Nama_File**/view.php
+        5. src/js/**Nama_Folder**/**Nama_File**.js
 
 
 ### INSTALLATION NOTES
@@ -51,4 +53,5 @@ Aturan ini dibuat untuk mempermudah dalam proses development, maintenance serta 
 2.	**Export db_core_v4**
 
 
-Author : *Ardi Arcadia*
+
+*Author : Ardi Arcadia*

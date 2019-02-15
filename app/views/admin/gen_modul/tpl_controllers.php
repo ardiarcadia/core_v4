@@ -3,12 +3,14 @@
 class Ctrl extends CI_Controller {
 
     public $dir_v = 'main/sub/';
+	public $dir_m = 'main/';
+	public $dir_l = 'main/';
 
     public function __construct(){
         parent::__construct();
         $this->m_auth->check_login();
-        $this->load->model('m_model');
-        $this->load->library('l_libraries');
+        $this->load->model($this->dir_m.'m_model');
+        $this->load->library($this->dir_l.'l_libraries');
     }
 
     function index()
