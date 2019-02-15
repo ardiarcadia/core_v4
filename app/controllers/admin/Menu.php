@@ -3,12 +3,14 @@
 class Menu extends CI_Controller {
 
 	public $dir_v = 'admin/menu/';
+	public $dir_m = 'admin/';
+	public $dir_l = 'admin/';
 
 	public function __construct(){
 		parent::__construct();
 		$this->m_auth->check_superadmin();
-		$this->load->model('m_admin');
-		$this->load->library('l_admin');
+		$this->load->model($this->dir_m.'m_admin');
+		$this->load->library($this->dir_l.'l_admin');
 	}
 
 	function index()

@@ -3,11 +3,13 @@
 class Profil extends CI_Controller {
 
 	public $dir_v = 'admin/profil/';
+	public $dir_m = 'admin/';
+	public $dir_l = 'admin/';
 
 	public function __construct(){
 		parent::__construct();
 		$this->m_auth->check_login();
-		$this->load->library('L_auth');
+		$this->load->library($this->dir_l.'L_auth');
 	}
 
 	function index()

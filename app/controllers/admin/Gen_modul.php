@@ -107,11 +107,11 @@ class Gen_modul extends CI_Controller {
                 copy($tpl_views, $new_v);
 
                 $tpl_models = $dir_tpl.'tpl_models.php';
-                $new_m      = $dir_m.'M_'.$folder_name.'.php';
+                $new_m      = $dir_m.'M_'.$file_name.'.php';
                 copy($tpl_models, $new_m);
 
                 $tpl_libraries = $dir_tpl.'tpl_libraries.php';
-                $new_l         = $dir_l.'L_'.$folder_name.'.php';
+                $new_l         = $dir_l.'L_'.$file_name.'.php';
                 copy($tpl_libraries, $new_l);
 
                 

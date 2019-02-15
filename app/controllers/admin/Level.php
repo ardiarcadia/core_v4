@@ -3,6 +3,8 @@
 class Level extends CI_Controller {
 
 	public $dir_v = 'admin/level/';
+	public $dir_m = 'admin/';
+	public $dir_l = 'admin/';
 
 	public function __construct(){
 		parent::__construct();
