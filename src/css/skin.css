@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'kodchasan';
+    src: url('../../lib/fonts/kodchasan-regular-webfont.woff') format('woff2'),
+         url('../../lib/fonts/kodchasan-regular-webfont.woff') format('woff');
+    font-style: normal;
+}
+
+body{
+	font-family: "Kodchasan", "Raleway", "Titillium", "Segoe UI", "Helvetica", "Arial", sans-serif;
+}
+
+/*Typografi Stayle*/
+a {
+    color: #0f9647;
+}
+a:hover
+{
+    color: #09602d;
+}
+
+/*Toggle Icon & Sidebar*/
+.toggle.front#sidenav-toggle{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #333333;
+    cursor: pointer;
+}
+.toggle.back#sidenav-toggle{
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    color: #333333;
+    cursor: pointer;
+}
+.toggle#sidenav-toggle:hover{
+    color: #0f9647;
+}
+img.logo-sidebar{
+    width:auto;
+    max-height: 48px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+i.fa.fa-angle-left, i.fa.fa-bars{
+    font-size: 1.5em;
+}
+
+/*Navbar Custom*/
+.navbar-default {
+    background-color: #fff;
+    border-bottom: 3px solid #0f9647;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px 15px 40px;
+    font-size: 18px;
+}
+.navbar {
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #0f9647;
+}
+.navbar-default .navbar-brand {
+    color: #333;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #0f9647;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #333;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #fff;
+    color: #0f9647;
+}
+
+/*PopUp Edit Box*/
+.popup_box{
+    position:absolute;
+    z-index:10;   
+    width:100px;
+    height:auto;
+    color:#333333;
+    background:#ffffff;
+    display: none;
+}
+#edit_btn.btn-block, #delete_btn.btn-block, #reset_btn.btn-block, #view_btn.btn-block{
+    margin-top: 0;
+}
+button.btn-block.btn-popup{
+    margin-top: 0;
+}
+
+/*Form Control*/
+.form-control:focus {
+    border-color:#0f9647;
+    box-shadow:0 0 0 .2rem rgba(15,150,71,0.05);
+}
+.btn-default.focus, .btn-default:focus {
+    color: #fff;
+    background-color:#0f9647;
+    border-color:#0f9647;
+}
+.btn-default:hover {
+    color: #fff;
+    background-color:#0f9647;
+    border-color:#0f9647;
+}
+.btn-default:active:hover, .btn-default.active:hover, .open > .dropdown-toggle.btn-default:hover, .btn-default:active:focus, .btn-default.active:focus, .open > .dropdown-toggle.btn-default:focus, .btn-default:active.focus, .btn-default.active.focus, .open > .dropdown-toggle.btn-default.focus {
+    color: #fff;
+    background-color:#09602d;
+    border-color:#09602d;
+}
+.btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: #fff;
+    background-color:#09602d;
+    border-color:#09602d;
+}
+
+/*Panel*/
+.panel-default > .panel-heading {
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.panel-default > form > .panel-footer {
+    background-color: #fff;
+}
+
+/*Modal*/
+.modal-header {
+    border-bottom: 3px solid #0f9647;
+}
+
+/*Pagination*/
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #0f9647;
+    border-color: #0f9647;
+}
+.pagination > li > a, .pagination > li > span {
+    color: #0f9647;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    color: #09602d;
+}
+
+/*Dropdown*/
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
+    background-color: #0f9647;
+}
+
+/*Jumbotron*/
+.jumbotron {
+    padding: 25px;
+    margin-bottom: 15px;
+}
+.jumbotron p {
+    font-size: 16px;
+}
+
+/*Navbar Sidemenu*/
+.nav > li > a:hover, .nav > li > a:focus {
+    background-color: transparent;
+    color: #0f9647;
+}
+.nav > li > a {
+    color: #333;
+    border-radius: 0;
+}
+
+/*Thumbnail*/
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+    text-decoration: none;
+    border-color: #0f9647;
+    background-color: #eee;
+    color: #0f9647;
+}
+a.thumbnail.is-icon-box > img{
+    max-height: 100px;
+}
+
+/*Option Style*/
+.is-no-padding {
+    padding: 0;
+}
+.is-shadow-bottom{
+    box-shadow: 0px 15px 5px -15px #111;
+}
+.is-shadow-panel{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.is-icon-box{
+    min-height: 250px;
+    padding: 25px;
+}
+.is-link-icon-box{
+    color: #333;
+    font-size: 16px;
+}
+
+/*Breadcrumb*/
+.breadcrumb {
+    border: 1px solid #c6c6c6c6;
+}
+
+/* Tabel Custom*/
+.table > thead > tr > th {
+    text-align: center;
+    vertical-align: middle;
+}
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 5px;
+}
+
+/* Icon Searching */
+i.fa.button-modal-ceklis{
+    cursor: pointer;
+}
