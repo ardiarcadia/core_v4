@@ -8,11 +8,14 @@
         <?php $this->m_admin->select_level($id->level); ?>
     </select>
 </div>
-
 <div class="form-group"> 
     <label class="control-label">Icon </label>
     <div  id="target"></div>
     <input type="hidden" id="icon" value="<?php echo $id->icon ?>"> 
+</div>
+<div class="form-group">
+    <label class="control-label">Link Icon2 </label>
+    <input class="form-control" type="text" id="icon2" value="<?=$id->icon2;?>">
 </div>
 <div class="form-group">
     <label class="control-label">Name </label>

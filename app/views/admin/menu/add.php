@@ -14,6 +14,10 @@
     <input type="hidden" id="icon"> 
 </div>
 <div class="form-group">
+    <label class="control-label">Link Icon2 </label>
+    <input class="form-control" type="text" id="icon2">
+</div>
+<div class="form-group">
     <label class="control-label">Name </label>
     <input class="form-control" type="text" id="name">
 </div>

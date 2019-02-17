@@ -34,7 +34,7 @@ class Submenu extends CI_Controller {
 
 	function table($akses)
 	{
-		$get_all = $this->db->query('SELECT a.id_submenu,a.name,a.link,a.status,a.level,a.position,a.icon as icon,c.name as main_menu FROM conf_submenu a JOIN conf_menu c ON a.id_menu=c.id_menu WHERE c.akses='.$akses.' ORDER BY a.position');
+		$get_all = $this->db->query('SELECT a.id_submenu,a.name,a.link,a.status,a.level,a.position,a.icon as icon,a.icon2,c.name as main_menu FROM conf_submenu a JOIN conf_menu c ON a.id_menu=c.id_menu WHERE c.akses='.$akses.' ORDER BY a.position');
 
 		$draw = intval($this->input->get("draw"));
 		$start = intval($this->input->get("start"));
@@ -47,9 +47,10 @@ class Submenu extends CI_Controller {
 			    "0" => $id->main_menu,
 			    "1" => $id->position,
 			    "2" => $this->iconCheck($id->icon),
-			    "3" => $id->name,
-			    "4" => $id->link,
-			    "5" => $this->l_admin->status_aktif($id->status)
+			    "3" => $id->icon2,
+			    "4" => $id->name,
+			    "5" => $id->link,
+			    "6" => $this->l_admin->status_aktif($id->status)
 			);
          }
 
@@ -107,6 +108,7 @@ class Submenu extends CI_Controller {
 			$data = array(
 					'id_menu' => $this->input->post('id_menu'),
 					'icon' => $this->input->post('icon'),
+					'icon2' => $this->input->post('icon2'),
 					'name' => $this->input->post('name'),
 					'link' => $this->input->post('link'),
 					'status' => $this->input->post('status'),
@@ -129,6 +131,7 @@ class Submenu extends CI_Controller {
 			$data = array(
 					'id_menu' => $this->input->post('id_menu'),
 					'icon' => $this->input->post('icon'),
+					'icon2' => $this->input->post('icon2'),
 					'link' => $this->input->post('link'),
 					'status' => $this->input->post('status'),
 					'level' => $result_level,
@@ -151,6 +154,7 @@ class Submenu extends CI_Controller {
 				$data = array(
 						'id_menu' => $this->input->post('id_menu'),
 						'icon' => $this->input->post('icon'),
+						'icon2' => $this->input->post('icon2'),
 						'name' => $this->input->post('name'),
 						'link' => $this->input->post('link'),
 						'status' => $this->input->post('status'),

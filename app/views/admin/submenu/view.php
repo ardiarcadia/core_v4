@@ -23,6 +23,7 @@
                                 <th>Main Menu</th>
                                 <th>Position</th>
                                 <th>Icon</th>
+                                <th>Link Icon2</th>
                                 <th>Name</th>
                                 <th>Link</th>
                                 <th>Status</th>

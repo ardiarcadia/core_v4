@@ -46,10 +46,11 @@ class Menu extends CI_Controller {
 			    "DT_RowId" => $id->id_menu,
 			    "0" => $id->position,
 			    "1" => $this->iconCheck($id->icon),
-			    "2" => $id->name,
-			    "3" => $id->link,
-			    "4" => $this->l_admin->yes_or_no($id->sub),
-			    "5" => $this->l_admin->status_aktif($id->status)
+			    "2" => $id->icon2,
+			    "3" => $id->name,
+			    "4" => $id->link,
+			    "5" => $this->l_admin->yes_or_no($id->sub),
+			    "6" => $this->l_admin->status_aktif($id->status)
 			);
          }
 
@@ -99,6 +100,7 @@ class Menu extends CI_Controller {
             if($level == '""'){$result_level = '';}else{$result_level = $level;}
 			$data = array(
 					'icon' => $this->input->post('icon'),
+					'icon2' => $this->input->post('icon2'),
 					'name' => $this->input->post('name'),
 					'link' => $this->input->post('link'),
 					'status' => $this->input->post('status'),
@@ -122,6 +124,7 @@ class Menu extends CI_Controller {
             if($level == '""'){$result_level = '';}else{$result_level = $level;}
 			$data = array(
 					'icon' => $this->input->post('icon'),
+					'icon2' => $this->input->post('icon2'),
 					'link' => $this->input->post('link'),
 					'status' => $this->input->post('status'),
 					'akses' => $this->input->post('akses'),
@@ -145,6 +148,7 @@ class Menu extends CI_Controller {
 	            if($level == '""'){$result_level = '';}else{$result_level = $level;}
 				$data = array(
 						'icon' => $this->input->post('icon'),
+						'icon2' => $this->input->post('icon2'),
 						'name' => $this->input->post('name'),
 						'link' => $this->input->post('link'),
 						'status' => $this->input->post('status'),
