@@ -20,46 +20,6 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col checkbox">
-                                <label>
-                                    <input type="checkbox" value="1" id="val_ctrl1" checked>
-                                    Controllers Folder
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col checkbox">
-                                <label>
-                                    <input type="checkbox" value="1" id="val_mdl1" checked>
-                                    Models Folder
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col checkbox">
-                                <label>
-                                    <input type="checkbox" value="1" id="val_lib1" checked>
-                                    Library Folder
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col checkbox">
-                                <label>
-                                    <input type="checkbox" value="1" id="val_view1" checked>
-                                    Views Folder
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col checkbox">
-                                <label>
-                                    <input type="checkbox" value="1" id="val_js1" checked>
-                                    Javascript Folder
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <div class="col">
                                 <button class="btn btn-default" id="create_main_btn">Buat</button>
                             </div>
@@ -94,7 +54,7 @@
                             </div><div class="form-group">
                                 <div class="col checkbox">
                                     <label>
-                                        <input type="checkbox" value="1" id="val_ctrl2" checked>
+                                        <input type="checkbox" value="1" id="check_ctrl" checked>
                                         Controllers Folder
                                     </label>
                                 </div>
@@ -102,7 +62,7 @@
                             <div class="form-group">
                                 <div class="col checkbox">
                                     <label>
-                                        <input type="checkbox" value="1" id="val_mdl2" checked>
+                                        <input type="checkbox" value="1" id="check_mdl" checked>
                                         Models Folder
                                     </label>
                                 </div>
@@ -110,7 +70,7 @@
                             <div class="form-group">
                                 <div class="col checkbox">
                                     <label>
-                                        <input type="checkbox" value="1" id="val_lib2" checked>
+                                        <input type="checkbox" value="1" id="check_lib" checked>
                                         Library Folder
                                     </label>
                                 </div>
@@ -118,7 +78,7 @@
                             <div class="form-group">
                                 <div class="col checkbox">
                                     <label>
-                                        <input type="checkbox" value="1" id="val_view2" checked>
+                                        <input type="checkbox" value="1" id="check_view" checked>
                                         Views Folder
                                     </label>
                                 </div>
@@ -126,7 +86,7 @@
                             <div class="form-group">
                                 <div class="col checkbox">
                                     <label>
-                                        <input type="checkbox" value="1" id="val_js2" checked>
+                                        <input type="checkbox" value="1" id="check_js" checked>
                                         Javascript Folder
                                     </label>
                                 </div>

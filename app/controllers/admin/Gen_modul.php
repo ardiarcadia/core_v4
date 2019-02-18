@@ -188,26 +188,35 @@ class Gen_modul extends CI_Controller {
                 mkdir($path_v.'/'.$file_name, 0777, true);
             }
 
-            $tpl_controllers = $dir_tpl.'tpl_controllers.php';
-            $new_c           = $path_c.'/'.ucwords($file_name).'.php';
-            copy($tpl_controllers, $new_c);
+            if($this->input->post('check_ctrl') == 1){
+                $tpl_controllers = $dir_tpl.'tpl_controllers.php';
+                $new_c           = $path_c.'/'.ucwords($file_name).'.php';
+                copy($tpl_controllers, $new_c);
+            }
 
-            $tpl_models = $dir_tpl.'tpl_models.php';
-            $new_m      = $path_m.'/M_'.$file_name.'.php';
-            copy($tpl_models, $new_m);
+            if($this->input->post('check_mdl') == 1){
+                $tpl_models = $dir_tpl.'tpl_models.php';
+                $new_m      = $path_m.'/M_'.$file_name.'.php';
+                copy($tpl_models, $new_m);
+            }
 
-            $tpl_libraries = $dir_tpl.'tpl_libraries.php';
-            $new_l         = $path_l.'/L_'.$file_name.'.php';
-            copy($tpl_libraries, $new_l);
+            if($this->input->post('check_lib') == 1){
+                $tpl_libraries = $dir_tpl.'tpl_libraries.php';
+                $new_l         = $path_l.'/L_'.$file_name.'.php';
+                copy($tpl_libraries, $new_l);
+            }
 
-            $tpl_views = $dir_tpl.'tpl_views.php';
-            $new_v     = $path_v.'/'.$file_name.'/view.php';
-            copy($tpl_views, $new_v);
+            if($this->input->post('check_view') == 1){
+                $tpl_views = $dir_tpl.'tpl_views.php';
+                $new_v     = $path_v.'/'.$file_name.'/view.php';
+                copy($tpl_views, $new_v);
+            }
 
-            
-            $tpl_javascript = $dir_tpl.'tpl_javascript.js';
-            $new_j          = $path_j.'/'.$file_name.'.js';
-            copy($tpl_javascript, $new_j);
+            if($this->input->post('check_js') == 1){
+                $tpl_javascript = $dir_tpl.'tpl_javascript.js';
+                $new_j          = $path_j.'/'.$file_name.'.js';
+                copy($tpl_javascript, $new_j);
+            }
 
             $notif['notif']  = 'Sub Modul baru berhasil dibuat !';
             $notif['status'] = 2;
