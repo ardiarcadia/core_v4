@@ -11,7 +11,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="no-cache">
 
-<link rel="stylesheet" href="<?=base_url('lib/grid/bootstrap-grid.min.css');?>">
 <link rel="stylesheet" href="<?=base_url('lib/bootstrap/css/bootstrap.min.css');?>">
 <link rel="stylesheet" href="<?=base_url('lib/fontawesome/fontawesome.min.css');?>">
 <link rel="stylesheet" href="<?=base_url('lib/sidenav/sidenav.min.css');?>">
@@ -30,6 +29,7 @@
 
 <script src="<?=base_url('lib/jquery/jquery-3.3.1.min.js')?>"></script>
 <script src="<?=base_url('lib/bootstrap/js/bootstrap.min.js')?>"></script>
+<script src="<?=base_url('lib/bootstrap/js/popper.min.js')?>"></script>
 <script src="<?=base_url('lib/sweetalert/sweetalert2.all.min.js')?>"></script>
 <script src="<?=base_url('src/js/notif.js')?>"></script> 
 <script src="<?=base_url('lib/sidenav/sidenav.min.js')?>"></script>

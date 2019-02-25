@@ -16,43 +16,43 @@ class Dashboard extends CI_Controller {
 		$data['icon_data'] = array(
 			'Recruitment' 					=> array(
 													'link' => site_url().'recruitment',
-													'icon' => 'img/icon-hr/businessman-paper-of-the-application-for-a-job.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Onboarding'					=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/businessman-with-suitcase-opening-door.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Performance Management'		=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/businessman-discussing-a-progress-report.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Benefits Administration'		=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/dollar-sign-outline-with-arrows-pointing-to-left-and-right.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Workforce Management'			=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/business-male-team.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Time And Attendance'			=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/speedometer-with-businessman-image.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Absence And Leave Management'	=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/legal-document-with-valid-period.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Learning And Development'		=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/businessman-discussing-a-business-report.png'
+													'icon' => 'img/noimage.png'
 												),
 			'Talent Management'				=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/businessman-close-up-with-a-recognition-medal.png'
+													'icon' => 'img/noimage.png'
 												),
 			'HR Analytics'					=> array(
 													'link' => '#',
-													'icon' => 'img/icon-hr/demographics-of-a-population.png'
+													'icon' => 'img/noimage.png'
 												)
 		);
 

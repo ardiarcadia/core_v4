@@ -28,7 +28,7 @@ class Auth extends CI_Controller {
             if($this->act_login($login_array)){
 				$this->index();
             }else{
-            	$notif = '<div class="alert alert-danger">Username atau Password anda salah !</div>';
+            	$notif = '<div class="alert alert-danger text-center">Username atau Password anda salah !</div>';
             	$this->session->set_tempdata('notif_login', $notif, 15);
         		$data['token'] = $this->gen_token();
                 $this->l_skin->login('auth/form_login', $data);
