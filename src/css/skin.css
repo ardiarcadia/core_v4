@@ -21,14 +21,14 @@ a:hover
 /*Toggle Icon & Sidebar*/
 .toggle.front#sidenav-toggle{
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 14px;
+    left: 14px;
     color: #333333;
     cursor: pointer;
 }
 .toggle.back#sidenav-toggle{
     position: absolute;
-    top: 24px;
+    top: 25px;
     left: 15px;
     color: #333333;
     cursor: pointer;
@@ -52,10 +52,7 @@ i.fa.fa-angle-left, i.fa.fa-bars{
     border-bottom: 3px solid #0f9647;
 }
 .navbar-brand {
-    float: left;
-    height: 50px;
-    padding: 15px 15px 15px 40px;
-    font-size: 18px;
+    padding-left: 30px;
 }
 .navbar {
     border-radius: 0;
@@ -73,9 +70,12 @@ i.fa.fa-angle-left, i.fa.fa-bars{
 .navbar-default .navbar-nav > li > a {
     color: #333;
 }
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #fff;
-    color: #0f9647;
+.dropdown-menu.right-text {
+    left: -70px;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #fff;
+    background-color: #0f9647;
 }
 
 /*PopUp Edit Box*/

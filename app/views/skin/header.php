@@ -1,26 +1,22 @@
-<nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse_navbar" aria-expanded="false">
-				<i class="fa fa-user-circle"></i>
-			</button>
-			<b><a class="navbar-brand" href="<?=base_url();?>"><?=$this->l_skin->apps_config('title');?></a></b>
-		</div>
-		
-		<div class="collapse navbar-collapse" id="collapse_navbar">
-			<ul class="nav navbar-nav navbar-right user-profil">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>&nbsp;&nbsp;<?=$this->m_auth->get_session('name');?>&nbsp;&nbsp;<i class="fa fa-angle-down"></i></a>
-					<ul class="dropdown-menu">
-						<!-- <li><a href="#"><i class="fa fa-bell"></i>&nbsp;&nbsp;Pemberitahuan</a></li> -->
-						<li><a href="<?=site_url('profil');?>"><i class="fa fa-user-cog"></i>&nbsp;&nbsp;Pengaturan Akun</a></li>
-						<li><a href="#"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Bantuan</a></li>
-						<li role="separator" class="divider"></li>
-						<li><a href="<?=site_url('logout');?>"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Keluar</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
+<nav class="navbar navbar-expand-lg navbar-default">
+	<b><a class="navbar-brand" href="<?=base_url();?>"><?=$this->l_skin->apps_config('title');?></a></b>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_navbar" aria-expanded="false">
+		<i class="fa fa-user-circle"></i>
+	</button>
+	
+	<div class="collapse navbar-collapse" id="collapse_navbar">
+		<ul class="navbar-nav mr-auto">
+		</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" id="navbarDropdown"><i class="fa fa-user-circle"></i>&nbsp;&nbsp;<?=$this->m_auth->get_session('name');?></a>
+				<div class="dropdown-menu right-text" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="<?=site_url('profil');?>"><i class="fa fa-user-cog"></i>&nbsp;&nbsp;Pengaturan Akun</a>
+					<a class="dropdown-item" href="#"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Bantuan</a>
+					<a class="dropdown-item" href="<?=site_url('logout');?>"><i class="fa fa-power-off"></i>&nbsp;&nbsp;Keluar</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 </nav>
 
