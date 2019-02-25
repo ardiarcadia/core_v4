@@ -1,5 +1,5 @@
 <?php if(empty($id->avatar)){$link = base_url('img/noimage.png');}else{$link = base_url($id->avatar);} ?>
-<img class="img-responsive rounded center-block" src="<?=$link;?>">
+<img class="card-img-top" src="<?=$link;?>">
 <hr>
 <div class="row button-edit">
     <div class="col-md-6">

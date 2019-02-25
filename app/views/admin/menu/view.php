@@ -2,11 +2,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card">
+                <div class="card-header">
                     <?php if(!empty($panel)){echo $panel;}?>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
                 <form class="form-inline">
                     <div class="form-group">
                         <select class="form-control" id="cat_menu" title="Kategori Menu">

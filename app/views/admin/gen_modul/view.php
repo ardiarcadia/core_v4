@@ -2,11 +2,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
+            <div class="card">
+                <div class="card-header">
                     <i class="fa fa-syringe"></i> &nbsp;<b>Generate Main Modul</b>
                 </div>
-                <div class="panel-body">
+                <div class="card-body">
 
                     <div class="row form">
                         <div class="form-group">
@@ -25,17 +25,16 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
 
                 </div>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
+                <div class="card">
+                    <div class="card-header">
                         <i class="fa fa-syringe"></i> &nbsp;<b>Generate Sub Modul</b>
                     </div>
-                    <div class="panel-body">
+                    <div class="card-body">
     
                         <div class="row">
                             <div class="form-group">
@@ -97,7 +96,6 @@
                                 </div>
                             </div>
                         </div>
-                        <hr>
     
                     </div>
                 </div>

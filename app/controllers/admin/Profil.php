@@ -9,7 +9,7 @@ class Profil extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->m_auth->check_login();
-		$this->load->library($this->dir_l.'L_auth');
+		$this->load->library('L_auth');
 	}
 
 	function index()

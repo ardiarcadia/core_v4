@@ -115,6 +115,11 @@ button.btn-block.btn-popup {
 }
 
 /*Form Control*/
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
 .form-control:focus {
     border-color:#0f9647;
     box-shadow:0 0 0 .2rem rgba(15,150,71,0.05);
@@ -194,6 +199,9 @@ button.btn-block.btn-popup {
 }
 .is-icon-box {
     min-height: 320px;
+}
+.is-icon-box-fa {
+    min-height: 120px;
 }
 .is-link {
     color: #333;
