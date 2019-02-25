@@ -93,7 +93,9 @@ a.nav-link:hover {
 .card-title {
     margin-bottom: 0px;
 }
-
+.card.is-icon-box:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.20);
+}
 
 /*PopUp Edit Box*/
 .popup_box {
@@ -180,17 +182,6 @@ button.btn-block.btn-popup {
     border-radius: 0;
 }
 
-/*Thumbnail*/
-a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
-    text-decoration: none;
-    border-color: #0f9647;
-    background-color: #eee;
-    color: #0f9647;
-}
-a.thumbnail.is-icon-box > img{
-    max-height: 100px;
-}
-
 /*Option Style*/
 .is-no-padding {
     padding: 0;
@@ -202,12 +193,14 @@ a.thumbnail.is-icon-box > img{
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .is-icon-box {
-    min-height: 250px;
-    padding: 25px;
+    min-height: 320px;
 }
-.is-link-icon-box {
+.is-link {
     color: #333;
-    font-size: 16px;
+}
+.is-link:hover {
+    color: #0f9647;
+    text-decoration: none;
 }
 
 /*Breadcrumb*/

@@ -29,12 +29,18 @@
 			<div class="row justify-content-center">
 
 				<?php foreach ($icon_data as $a => $b ) { ?>
-				<div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
-					<a href="<?=$b['link'];?>" class="thumbnail is-icon-box is-link-icon-box">
-						<img src="<?=base_url($b['icon']);?>" alt="Image Is Not Found !"><br>
-						<p class="text-center"><?=$a;?></p>
-					</a>
-				</div>
+
+					<div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+						<div class="card is-icon-box">
+							<div class="card-body">
+								<a class="is-link" href="<?=$b['link'];?>">
+									<img class="card-img-top" src="<?=base_url($b['icon']);?>" alt="Image Is Not Found !">
+									<p class="card-text text-center"><?=$a;?></p>
+								</a>
+							</div>
+						</div><br>
+					</div>
+
 				<?php } ?>
 			
 			</div>
