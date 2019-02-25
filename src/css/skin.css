@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-body{
+body {
 	font-family: "Kodchasan", "Raleway", "Titillium", "Segoe UI", "Helvetica", "Arial", sans-serif;
 }
 
@@ -13,36 +13,35 @@ body{
 a {
     color: #0f9647;
 }
-a:hover
-{
+a:hover {
     color: #09602d;
 }
 
 /*Toggle Icon & Sidebar*/
-.toggle.front#sidenav-toggle{
+.toggle.front#sidenav-toggle {
     position: absolute;
     top: 14px;
     left: 14px;
     color: #333333;
     cursor: pointer;
 }
-.toggle.back#sidenav-toggle{
+.toggle.back#sidenav-toggle {
     position: absolute;
     top: 25px;
     left: 15px;
     color: #333333;
     cursor: pointer;
 }
-.toggle#sidenav-toggle:hover{
+.toggle#sidenav-toggle:hover {
     color: #0f9647;
 }
-img.logo-sidebar{
+img.logo-sidebar {
     width:auto;
     max-height: 48px;
     margin-left: 10px;
     margin-right: 5px;
 }
-i.fa.fa-angle-left, i.fa.fa-bars{
+i.fa.fa-angle-left, i.fa.fa-bars {
     font-size: 1.5em;
 }
 
@@ -77,9 +76,27 @@ i.fa.fa-angle-left, i.fa.fa-bars{
     color: #fff;
     background-color: #0f9647;
 }
+a.nav-link {
+    color: #333;
+}
+a.nav-link:hover {
+    color: #0f9647;
+}
+
+/* Card Panel */
+.card {
+    border-radius: 0px;
+}
+.card-header {
+    background-color: rgb(233, 236, 239);
+}
+.card-title {
+    margin-bottom: 0px;
+}
+
 
 /*PopUp Edit Box*/
-.popup_box{
+.popup_box {
     position:absolute;
     z-index:10;   
     width:100px;
@@ -88,10 +105,10 @@ i.fa.fa-angle-left, i.fa.fa-bars{
     background:#ffffff;
     display: none;
 }
-#edit_btn.btn-block, #delete_btn.btn-block, #reset_btn.btn-block, #view_btn.btn-block{
+#edit_btn.btn-block, #delete_btn.btn-block, #reset_btn.btn-block, #view_btn.btn-block {
     margin-top: 0;
 }
-button.btn-block.btn-popup{
+button.btn-block.btn-popup {
     margin-top: 0;
 }
 
@@ -119,16 +136,6 @@ button.btn-block.btn-popup{
     color: #fff;
     background-color:#09602d;
     border-color:#09602d;
-}
-
-/*Panel*/
-.panel-default > .panel-heading {
-    background-color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-}
-.panel-default > form > .panel-footer {
-    background-color: #fff;
 }
 
 /*Modal*/
@@ -188,17 +195,17 @@ a.thumbnail.is-icon-box > img{
 .is-no-padding {
     padding: 0;
 }
-.is-shadow-bottom{
+.is-shadow-bottom {
     box-shadow: 0px 15px 5px -15px #111;
 }
-.is-shadow-panel{
+.is-shadow-panel {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-.is-icon-box{
+.is-icon-box {
     min-height: 250px;
     padding: 25px;
 }
-.is-link-icon-box{
+.is-link-icon-box {
     color: #333;
     font-size: 16px;
 }
@@ -221,6 +228,6 @@ a.thumbnail.is-icon-box > img{
 }
 
 /* Icon Searching */
-i.fa.button-modal-ceklis{
+i.fa.button-modal-ceklis {
     cursor: pointer;
 }

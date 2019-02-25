@@ -1,5 +1,5 @@
 <div class="jumbotron" style="margin-top:-15px;">
-	<div class="container">
+	<div class="container-fluid">
 		<h2><?=(isset($head_title)) ? $head_title : $this->l_skin->apps_config('head_title');?></h2>
 		<p><?=(isset($head_subtitle)) ? $head_subtitle : $this->l_skin->apps_config('head_subtitle');?></p>
 	</div>
@@ -9,17 +9,17 @@
 	<div class="row">
 
 		<div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4><b>Repositories</b></h4>
+			<div class="card">
+				<div class="card-header">
+					<h5 class="card-title"><b>Repositories</b></h5>
 				</div>
-  				<div class="panel-body is-no-padding">
+  				<div class="card-body is-no-padding">
 
-  					<ul class="nav nav-pills nav-stacked">
+  					<nav class="nav flex-column"">
   						<?php ksort($sidebar_data); foreach ($sidebar_data as $k => $v ) { ?>
-  							<li><a href="<?=$v['link'];?>"><i class="fa fa-caret-right"></i> <?=$k;?></a></li>
+  							<a class="nav-link" href="<?=$v['link'];?>"><i class="fa fa-caret-right"></i> <?=$k;?></a>
   						<?php } ?>
-  					</ul>
+					</nav>
 
   				</div>
   			</div>
