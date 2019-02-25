@@ -88,7 +88,7 @@ a.nav-link:hover {
     border-radius: 0px;
 }
 .card-header {
-    background-color: rgb(233, 236, 239);
+    background-color: #fff;
 }
 .card-title {
     margin-bottom: 0px;
@@ -223,4 +223,14 @@ button.btn-block.btn-popup {
 /* Icon Searching */
 i.fa.button-modal-ceklis {
     cursor: pointer;
+}
+
+/* Tabel datatables custom */
+.page-item.active .page-link {
+    color: #6c757d;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+.page-item.active .page-link:hover {
+    color: #fff;
 }
