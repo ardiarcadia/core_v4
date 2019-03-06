@@ -24,14 +24,13 @@ CREATE TABLE `conf_level` (
   `id_level` tinyint(2) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id_level`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 /*Data for the table `conf_level` */
 
 insert  into `conf_level`(`id_level`,`name`) values 
 (1,'Superadmin'),
-(2,'Admin'),
-(3,'User');
+(2,'Admin');
 
 /*Table structure for table `conf_menu` */
 
@@ -40,7 +39,7 @@ DROP TABLE IF EXISTS `conf_menu`;
 CREATE TABLE `conf_menu` (
   `id_menu` int(10) NOT NULL AUTO_INCREMENT,
   `icon` varchar(30) NOT NULL,
-  `icon2` varchar(150) NOT NULL,
+  `icon2` varchar(150) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `link` varchar(50) NOT NULL,
   `status` tinyint(1) NOT NULL,
@@ -65,7 +64,7 @@ CREATE TABLE `conf_submenu` (
   `id_submenu` int(5) NOT NULL AUTO_INCREMENT,
   `id_menu` int(5) NOT NULL,
   `icon` varchar(30) NOT NULL,
-  `icon2` varchar(150) NOT NULL,
+  `icon2` varchar(150) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `link` text NOT NULL,
   `status` tinyint(1) NOT NULL,
@@ -92,14 +91,13 @@ CREATE TABLE `conf_users` (
   `ip_address` varchar(25) NOT NULL,
   `status` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 /*Data for the table `conf_users` */
 
 insert  into `conf_users`(`id_user`,`fullname`,`avatar`,`username`,`password`,`salt`,`level`,`last_login`,`ip_address`,`status`) values 
-(1,'Superadmin','img/avatar/6U6lk2At.jpg','admin','89a0c6ee2ad740022ce185004dd64cca98c04b51','Wb8e.?s5',1,'2019-02-16 12:59:34','::1',1),
-(2,'Ardi','','ardi','00cc677ebf28c2788351082fe42ccc8982437a9c','+qt_a0Wy',1,'0000-00-00 00:00:00','',1),
-(3,'User1','','user1','b441b93b17fc042610272f3f8cba985561306ff2','kbh.U_t/',3,'0000-00-00 00:00:00','',1);
+(1,'Superadmin','img/avatar/6U6lk2At.jpg','admin','89a0c6ee2ad740022ce185004dd64cca98c04b51','Wb8e.?s5',1,'2019-02-25 12:59:11','127.0.0.1',1),
+(2,'Ardi','','ardi','00cc677ebf28c2788351082fe42ccc8982437a9c','+qt_a0Wy',1,'0000-00-00 00:00:00','',1);
 
 /*Table structure for table `temp_login` */
 
@@ -112,28 +110,9 @@ CREATE TABLE `temp_login` (
   `ip_address` varchar(20) DEFAULT NULL,
   `nama_user` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_temp`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `temp_login` */
-
-insert  into `temp_login`(`id_temp`,`id_user`,`tanggal`,`ip_address`,`nama_user`) values 
-(1,1,'2019-02-08 15:37:28','::1','Superadmin'),
-(2,1,'2019-02-08 15:45:35','::1','Superadmin'),
-(3,1,'2019-02-09 07:49:12','::1','Superadmin'),
-(4,1,'2019-02-09 13:09:51','::1','Superadmin'),
-(5,1,'2019-02-11 08:12:42','::1','Superadmin'),
-(6,1,'2019-02-11 13:34:21','::1','Superadmin'),
-(7,1,'2019-02-12 07:40:56','::1','Superadmin'),
-(8,1,'2019-02-12 13:35:39','::1','Superadmin'),
-(9,1,'2019-02-14 07:50:42','::1','Superadmin'),
-(10,1,'2019-02-14 07:57:10','::1','Superadmin'),
-(11,1,'2019-02-14 09:10:58','::1','Superadmin'),
-(12,1,'2019-02-15 07:55:17','::1','Superadmin'),
-(13,1,'2019-02-15 09:32:00','::1','Superadmin'),
-(14,1,'2019-02-15 13:29:23','::1','Superadmin'),
-(15,1,'2019-02-15 14:56:53','::1','Superadmin'),
-(16,1,'2019-02-16 12:46:15','::1','Superadmin'),
-(17,1,'2019-02-16 12:59:34','::1','Superadmin');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
