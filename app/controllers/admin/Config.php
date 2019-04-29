@@ -92,12 +92,12 @@ class Config extends CI_Controller {
 		date_default_timezone_set('UTC');
 		$this->load->dbutil();
         $config = array(
-        	'tables'	=> array('conf_label', 'conf_icon', 'conf_level', 'conf_menu', 'conf_submenu', 'conf_users'),
+        	'tables'	=> array('conf_level', 'conf_menu', 'conf_submenu', 'conf_users'),
 			'format'	=> 'zip',
-			'filename'	=> 'db_backend_tbl.sql'
+			'filename'	=> 'db_conf.sql'
 		);
         $backup = $this->dbutil->backup($config);
-        $nama_database = 'backup_db_kitas_tbl_'.gmdate('Ymdhis', time()+60*60*7).'.zip';
+        $nama_database = 'backup_db_tbl_conf_'.gmdate('Ymdhis', time()+60*60*7).'.zip';
         $this->load->helper('download');
         force_download($nama_database, $backup);
 	}
