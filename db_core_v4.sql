@@ -12,13 +12,13 @@ MySQL - 10.1.30-MariaDB : Database - db_core_v4
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_core_v4` /*!40100 DEFAULT CHARACTER SET latin1 */;
+-- CREATE DATABASE /*!32312 IF NOT EXISTS*/`db_core_v4` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
-USE `db_core_v4`;
+-- USE `db_core_v4`;
 
 /*Table structure for table `conf_level` */
 
-DROP TABLE IF EXISTS `conf_level`;
+-- DROP TABLE IF EXISTS `conf_level`;
 
 CREATE TABLE `conf_level` (
   `id_level` tinyint(2) NOT NULL AUTO_INCREMENT,
