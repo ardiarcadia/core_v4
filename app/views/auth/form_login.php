@@ -6,7 +6,7 @@
 <div class="container-fluid" style="margin-top:20px;">
     <div class="row justify-content-center">
         <div class="col col-lg-4 col-md-6 col-sm-6">
-            <div class="card">
+            <div class="card login-box">
                 <div class="card-body">
                     <h3 class="card-title"><img class="card-img-top" src="<?=site_url($this->l_skin->apps_config('logo'));?>"></h3>
                     <hr class="heading-login">
