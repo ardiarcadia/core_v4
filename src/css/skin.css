@@ -235,8 +235,8 @@ i.fa.button-modal-ceklis {
 
 /* Tabel datatables custom */
 .page-item.active .page-link {
-    color: #6c757d;
-    background-color: #fff;
+    color: #ffffff;
+    background-color: #0f9647;
     border-color: #dee2e6;
 }
 .page-item.active .page-link:hover {
