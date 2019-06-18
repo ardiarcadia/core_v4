@@ -101,28 +101,4 @@ class M_auth extends CI_Model {
         else{ return NULL; }
     }
 
-    function akses_menu_rekrutment($flag)
-    {
-        $user_level = $this->session->userdata('sess_id');
-
-		$modul['0'] 	= array(1,2,3,4,5,6,7,8); //modul checking
-		$modul['1'] 	= array(1,2,3,4,5); //modul registrasi
-		$modul['2'] 	= array(1,6,7); //modul jadwal
-		$modul['3']	 	= array(1,6,7); //modul sms
-        $modul['4']	 	= array(1,2,3,4,5,6,7,8,9,10); //modul proses
-
-        $modul['5']     = array(1,2,3,4,5); //proses verif
-        $modul['6']     = array(1,7); //proses tes tulis
-        $modul['7']     = array(1,7); //proses tes alat
-        $modul['8']     = array(1,6,7); //proses interview
-        $modul['9']     = array(1,8); //proses mcu
-        $modul['10']    = array(1,8); //proses registrasi
-
-        $modul['11']    = array(1,3,2); // Menu proses tabs untuk superadmin dan admin saja
-
-        $modul['12']    = array(1,6,7,8); // Menu WO
-        return (in_array($user_level, $modul[$flag])) ? TRUE : FALSE;
-
-    }
-
 }
