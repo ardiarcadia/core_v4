@@ -60,7 +60,7 @@ class Backup_db extends CI_Controller {
 
 	function json_main_menu()
 	{
-		$get_all = $this->db->query('SELECT * FROM conf_menu ORDER BY id_menu ASC');
+		$get_all = $this->db->query('SELECT * FROM conf_menu ORDER BY position ASC');
 		$json_file = array();
 		foreach ($get_all->result() as $val) {
 			$json_file[] = array(
@@ -88,7 +88,7 @@ class Backup_db extends CI_Controller {
 
 	function json_sub_menu()
 	{
-		$get_all = $this->db->query('SELECT * FROM conf_submenu ORDER BY id_submenu ASC');
+		$get_all = $this->db->query('SELECT * FROM conf_submenu ORDER BY position ASC');
 		$json_file = array();
 		foreach ($get_all->result() as $val) {
 			$json_file[] = array(
