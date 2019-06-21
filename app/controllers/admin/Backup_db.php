@@ -58,23 +58,76 @@ class Backup_db extends CI_Controller {
         force_download($nama_database, $backup);
 	}
 
-	function suggest_jabatan()
+	function json_main_menu()
 	{
-		// $get_all = $this->db->query('SELECT jabatan FROM apps_master GROUP BY jabatan');
-		// $json_file = array();
-		// foreach ($get_all->result() as $val) {
-		// 	$json_file[] = array(
-		// 		'value' => strtoupper($this->lib_core->FilterText($val->jabatan))
-		// 	);
-		// }
-		// $this->load->helper('file');
-		// if( ! write_file('./lib/json/suggest_jabatan.json', json_encode($json_file))){
-		// 	$notif = '<script>alert("Failed : Unable to write the file");</script>';
-		// }else{
-		// 	$notif = '<script>alert("File written success !");</script>';
-		// }
-		// echo $notif;
-		// redirect('admin/backup_db', 'refresh');
+		$get_all = $this->db->query('SELECT * FROM conf_menu ORDER BY id_menu ASC');
+		$json_file = array();
+		foreach ($get_all->result() as $val) {
+			$json_file[] = array(
+				'id_menu' 	=> $val->id_menu,
+				'icon'		=> $val->icon,
+				'icon2'		=> $val->icon2,
+				'name'		=> $val->name,
+				'link'		=> $val->link,
+				'status'	=> $val->status,
+				'akse'		=> $val->akses,
+				'sub'		=> $val->sub,
+				'level'		=> $val->level,
+				'position'	=> $val->position
+			);
+		}
+		$this->load->helper('file');
+		if( ! write_file('./src/json/main_menu.json', json_encode($json_file))){
+			$notif = '<script>alert("Failed : Unable to write the file");</script>';
+		}else{
+			$notif = '<script>alert("File written success !");</script>';
+		}
+		echo $notif;
+		redirect('admin/backup_db', 'refresh');
 	}
+
+	function json_sub_menu()
+	{
+		$get_all = $this->db->query('SELECT * FROM conf_submenu ORDER BY id_submenu ASC');
+		$json_file = array();
+		foreach ($get_all->result() as $val) {
+			$json_file[] = array(
+				'id_submenu' 	=> $val->id_submenu,
+				'id_menu'		=> $val->id_menu,
+				'icon'			=> $val->icon,
+				'icon2'			=> $val->icon2,
+				'name'			=> $val->name,
+				'link'			=> $val->link,
+				'status'		=> $val->status,
+				'level'			=> $val->level,
+				'position'		=> $val->position
+			);
+		}
+		$this->load->helper('file');
+		if( ! write_file('./src/json/sub_menu.json', json_encode($json_file))){
+			$notif = '<script>alert("Failed : Unable to write the file");</script>';
+		}else{
+			$notif = '<script>alert("File written success !");</script>';
+		}
+		echo $notif;
+		redirect('admin/backup_db', 'refresh');
+	}
+
+    function json_menu_sidebar()
+    {
+        $LevelUser = $this->session->userdata('sess_level');
+        $file_json = file_get_contents('./src/json/main_menu.json');
+        $data_json = json_decode($file_json,true);
+        // print_r($data_json);
+        foreach ($data_json as $key => $value) {
+        	echo $data_json[$key]['icon']." ";
+        }
+        // echo $data_json['1']['id_menu'];
+    }
+
+    function menu_sidebar()
+    {
+    	$this->l_skin->menu_sidebar();
+    }
 
 }

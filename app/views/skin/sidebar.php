@@ -5,7 +5,7 @@
 	</div>
 
 	<ul class="sidenav-menu">
-		<?=$this->m_auth->menu_sidebar();?>
+		<?=$this->l_skin->menu_sidebar();?>
 	</ul>
 
  </nav>
