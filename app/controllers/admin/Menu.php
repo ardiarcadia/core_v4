@@ -113,6 +113,7 @@ class Menu extends CI_Controller {
 			$notif['notif'] = 'Menu '.$this->input->post('name').' berhasil disimpan !';
 			$notif['status'] = 2;
 			echo json_encode($notif);
+			$this->write_json_file_main_menu();
 		}
 	}
 
@@ -137,6 +138,7 @@ class Menu extends CI_Controller {
 			$notif['notif'] = 'Menu '.$this->input->post('name').' berhasil di ubah !';
 			$notif['status'] = 2;
 			echo json_encode($notif);
+			$this->write_json_file_main_menu();
 		}else{
 			$this->form_validation->set_rules('name', 'Name', 'trim|required|min_length[4]|is_unique[conf_menu.name]');
 			if ($this->form_validation->run() == FALSE){
@@ -162,6 +164,7 @@ class Menu extends CI_Controller {
 				$notif['notif'] = 'Menu '.$this->input->post('name').' berhasil di ubah !';
 				$notif['status'] = 2;
 				echo json_encode($notif);
+				$this->write_json_file_main_menu();
 			}
 		}
 	}
@@ -190,6 +193,29 @@ class Menu extends CI_Controller {
 			$notif['notif'] = 'Data '.$this->input->post('name').' berhasil di hapus !';
 			$notif['status'] = 2;
 	        echo json_encode($notif);
+	        $this->write_json_file_main_menu();
 		}
+	}
+
+	function write_json_file_main_menu()
+	{
+		$get_all = $this->db->query('SELECT * FROM conf_menu ORDER BY position ASC');
+		$json_file = array();
+		foreach ($get_all->result() as $val) {
+			$json_file[] = array(
+				'id_menu' 	=> $val->id_menu,
+				'icon'		=> $val->icon,
+				'icon2'		=> $val->icon2,
+				'name'		=> $val->name,
+				'link'		=> $val->link,
+				'status'	=> $val->status,
+				'akse'		=> $val->akses,
+				'sub'		=> $val->sub,
+				'level'		=> $val->level,
+				'position'	=> $val->position
+			);
+		}
+		$this->load->helper('file');
+		write_file('./src/json/main_menu.json', json_encode($json_file));
 	}
 }
