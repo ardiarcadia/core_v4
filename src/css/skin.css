@@ -88,9 +88,6 @@ a.nav-link:hover {
 .card {
     border-radius: 0px;
 }
-.card-header {
-    background-color: #fff;
-}
 .card-title {
     margin-bottom: 0px;
 }
