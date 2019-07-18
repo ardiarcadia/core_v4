@@ -1,4 +1,4 @@
-<div class="jumbotron" style="margin-top:-15px;">
+<div class="jumbotron">
 	<div class="container-fluid">
 		<h2><?=(isset($head_title)) ? $head_title : $this->l_skin->apps_config('head_title');?></h2>
 		<p><?=(isset($head_subtitle)) ? $head_subtitle : $this->l_skin->apps_config('head_subtitle');?></p>

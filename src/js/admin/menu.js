@@ -244,7 +244,7 @@ function iconset(icon = 'empty'){
 	    rows: 4,
 	    search: true,
 	    searchText: 'Search',
-	    selectedClass: 'btn-success',
+	    selectedClass: 'btn-default',
 	    unselectedClass: ''
 	}); 
 

@@ -23,7 +23,3 @@
 <a href="javascript:;" class="toggle front" id="sidenav-toggle">
     <i class="fa fa-bars"></i>
 </a>
-
-<div class="container">
-	<hr>
-</div>

@@ -48,7 +48,9 @@ i.fa.fa-angle-left, i.fa.fa-bars {
 
 /*Navbar Custom*/
 .navbar-default {
-    background-color: transparent;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 15px;
 }
 .navbar-brand {
     padding-left: 30px;
@@ -72,8 +74,11 @@ i.fa.fa-angle-left, i.fa.fa-bars {
     left: -70px;
 }
 .dropdown-item:focus, .dropdown-item:hover {
-    color: #fff;
-    background-color: #0f9647;
+    color: #333;
+    background-color: rgba(0,0,0,.05);
+}
+.dropdown-menu {
+    border-radius:none;
 }
 a.nav-link {
     color: #333;
