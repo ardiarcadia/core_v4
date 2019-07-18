@@ -1,17 +1,12 @@
-<style type="text/css">
-    .heading-login{
-        border-bottom: 3px solid #0f9647;
-    }
-</style>
 <div class="container-fluid" style="margin-top:20px;">
     <div class="row justify-content-center">
         <div class="col col-lg-4 col-md-6 col-sm-6">
             <div class="card login-box">
                 <div class="card-body">
                     <h3 class="card-title"><img class="card-img-top" src="<?=site_url($this->l_skin->apps_config('logo'));?>"></h3>
-                    <hr class="heading-login">
+                    <hr>
                     <form action="<?=site_url('login');?>" method="POST">
-                        <p class="text-center">Human Resource Information System</p>
+                        <p class="text-center"><?=$this->l_skin->apps_config('title');?></p>
                         <hr>
                         <?=$this->session->tempdata('notif_login');?>
                         <div class="form-group">

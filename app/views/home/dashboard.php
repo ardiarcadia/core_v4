@@ -34,11 +34,15 @@
 						<div class="card is-icon-box">
 							<div class="card-body">
 								<a class="is-link" href="<?=$b['link'];?>">
-									<img class="card-img-top" src="<?=base_url($b['icon']);?>" alt="Image Is Not Found !">
-									<p class="card-text text-center"><?=$a;?></p>
+									<div class="text-center">
+										<img class="card-img-top" src="<?=base_url($b['icon']);?>" alt="Image Is Not Found !">
+									</div>
 								</a>
 							</div>
-						</div><br>
+							<div class="card-footer">
+								<p class="card-text text-center"><?=$a;?></p>
+							</div>
+						</div>
 					</div>
 
 				<?php } ?>

@@ -48,15 +48,13 @@ i.fa.fa-angle-left, i.fa.fa-bars {
 
 /*Navbar Custom*/
 .navbar-default {
-    background-color: #fff;
-    border-bottom: 3px solid #0f9647;
+    background-color: transparent;
 }
 .navbar-brand {
     padding-left: 30px;
 }
 .navbar {
     border-radius: 0;
-    margin-bottom: 15px;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
     color: #0f9647;
@@ -143,11 +141,6 @@ button.btn-block.btn-popup {
     border-color:#09602d;
 }
 
-/*Modal*/
-.modal-header {
-    border-bottom: 3px solid #0f9647;
-}
-
 /*Pagination*/
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
     background-color: #0f9647;
@@ -196,7 +189,7 @@ button.btn-block.btn-popup {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 .is-icon-box {
-    min-height: 320px;
+    margin-bottom: 10px;
 }
 .is-icon-box-fa {
     min-height: 120px;
