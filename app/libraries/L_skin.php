@@ -128,9 +128,9 @@ class L_skin {
 	        		echo '<ul class="sidenav-dropdown" data-sidenav-dropdown>';
 	        		foreach ($data_sub_menu as $key2 => $val2)
 	                {
-	                    if($data_main_menu[$key]['id_menu'] == $data_sub_menu[$key]['id_menu'])
+	                    if($data_main_menu[$key]['id_menu'] == $data_sub_menu[$key2]['id_menu'])
 	                    {
-	                        echo '<li><a href="'.site_url().$data_sub_menu[$key]['link'].'"><i class="fa '.$data_sub_menu[$key]['icon'].'"></i>&nbsp;&nbsp;'.$data_sub_menu[$key]['name'].'</a></li>'."\n";
+	                        echo '<li><a href="'.site_url().$data_sub_menu[$key2]['link'].'"><i class="fa '.$data_sub_menu[$key2]['icon'].'"></i>&nbsp;&nbsp;'.$data_sub_menu[$key2]['name'].'</a></li>'."\n";
 	                    }
 	                }
 	                echo '</ul></li>';
