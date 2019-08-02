@@ -1,12 +1,17 @@
 @font-face {
-    font-family: 'kodchasan';
-    src: url('../../lib/fonts/kodchasan-regular-webfont.woff') format('woff2'),
-         url('../../lib/fonts/kodchasan-regular-webfont.woff') format('woff');
+    font-family: 'Titilium';
+    src: url('titilliumweb-regular-webfont.eot');
+    src: url('titilliumweb-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('titilliumweb-regular-webfont.woff2') format('woff2'),
+         url('titilliumweb-regular-webfont.woff') format('woff'),
+         url('titilliumweb-regular-webfont.ttf') format('truetype'),
+         url('titilliumweb-regular-webfont.svg#titillium_webregular') format('svg');
+    font-weight: normal;
     font-style: normal;
 }
 
 body {
-	font-family: "Kodchasan", "Raleway", "Titillium", "Segoe UI", "Helvetica", "Arial", sans-serif;
+	font-family: "Titilium", "Kodchasan", "Raleway", "Segoe UI", "Helvetica", "Arial", sans-serif;
     background-color: #efefef;
 }
 
