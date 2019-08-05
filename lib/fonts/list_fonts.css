@@ -9,10 +9,3 @@
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'kodchasan';
-    src: url('kodchasan-regular-webfont.woff2') format('woff2'),
-         url('kodchasan-regular-webfont.woff') format('woff');
-    font-style: normal;
-    font-weight: normal;
-}
