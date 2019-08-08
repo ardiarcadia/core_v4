@@ -115,10 +115,20 @@ class Level extends CI_Controller {
 	function act_del()
 	{
 		$id = $this->input->post('id_tbl');
-		$this->db->where('id_level', $id);
-		$this->db->delete('conf_level');
-		$notif['notif'] = 'Data '.$this->input->post('name').' berhasil di hapus !';
-		$notif['status'] = 2;
+		$this->db->select();
+    	$this->db->from("conf_users");
+    	$this->db->where("level",$id);
+    	$this->db->limit(1);
+    	$query = $this->db->get();
+    	if($query->num_rows() == 1){
+    		$notif['notif']  = 'Data level masih di pakai user, unset dulu semua user yang memiliki level ini di menu edit user !';
+			$notif['status'] = 1;
+		}else{
+			$this->db->where('id_level', $id);
+			$this->db->delete('conf_level');
+			$notif['notif']  = 'Data '.$this->input->post('name').' berhasil di hapus !';
+			$notif['status'] = 2;
+		}
         echo json_encode($notif);
 	}
 
