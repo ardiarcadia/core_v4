@@ -22,7 +22,7 @@
 
 <?=$content;?> 
 
-<script src="<?=base_url('lib/jquery/jquery-3.3.1.min.js')?>"></script>
+<script src="<?=base_url('lib/jquery/jquery.min.js')?>"></script>
 <script src="<?=base_url('lib/bootstrap/js/bootstrap.min.js')?>"></script>
 <?php if(isset($js)){$this->l_skin->js_load($js);} ?>
 </body>

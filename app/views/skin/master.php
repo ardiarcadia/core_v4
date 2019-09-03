@@ -27,7 +27,7 @@
 <?=$modal;?> 
 <?=$footer;?> 
 
-<script src="<?=base_url('lib/jquery/jquery-3.3.1.min.js')?>"></script>
+<script src="<?=base_url('lib/jquery/jquery.min.js')?>"></script>
 <script src="<?=base_url('lib/bootstrap/js/bootstrap.min.js')?>"></script>
 <script src="<?=base_url('lib/bootstrap/js/popper.min.js')?>"></script>
 <script src="<?=base_url('lib/sweetalert/sweetalert2.all.min.js')?>"></script>
