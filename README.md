@@ -1,4 +1,4 @@
-## Project Core Verison 4 Indonesia Morowali Industrial Park
+## Project Core Verison 4
 
 Core versi ke empat dengan base Codeigniter versi 3.1.10 dengan melakukan perombakan pada core standar Codeigniter yang di bangun dengan tujuan mempermudah proses development, maintenance serta colaboration programmer dalam menangani project aplikasi berbasis web.
 
