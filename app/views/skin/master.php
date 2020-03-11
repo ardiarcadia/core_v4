@@ -31,9 +31,9 @@
 <script src="<?=base_url('lib/bootstrap/js/bootstrap.min.js')?>"></script>
 <script src="<?=base_url('lib/bootstrap/js/popper.min.js')?>"></script>
 <script src="<?=base_url('lib/sweetalert/sweetalert2.all.min.js')?>"></script>
-<script src="<?=base_url('src/js/notif.js')?>"></script> 
+<script src="<?=base_url('src/js/global.js')?>"></script>
 <script src="<?=base_url('lib/sidenav/sidenav.min.js')?>"></script>
 <script>$('[data-sidenav]').sidenav();</script>
-<?php if(isset($js)){$this->l_skin->js_load($js);} ?> 
+<?php if(isset($js)){$this->l_skin->js_load($js);} ?>
 </body>
 </html>
