@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="<?=base_url('lib/fontawesome/fontawesome.min.css');?>">
 <link rel="stylesheet" href="<?=base_url('lib/sidenav/sidenav.min.css');?>">
 <?php if(isset($css)){$this->l_skin->css_load($css);} ?>
-<link rel="stylesheet" href="<?=base_url('src/css/skin.css?v='.filemtime('src/css/skin.css').'');?>">
+<link rel="stylesheet" href="<?=base_url('src/css/global.css?v='.filemtime('src/css/global.css').'');?>">
 <link rel="icon" href="<?=base_url($this->l_skin->apps_config('favicon'));?>" type="image/x-icon">
 <script>var site_url='<?=site_url();?>';</script>
 </head>

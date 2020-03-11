@@ -44,6 +44,14 @@ function notifCancle(data){
 	})
 };
 
+function loadingShow() {
+	$('#loading').show();
+}
+
+function loadingHide() {
+	$('#loading').hide();
+}
+
 $(document).ready(function(){
 	// Setting Modal and Sweet Alert 2
 	$("div#MyModal").on('shown.bs.modal',function(e){
