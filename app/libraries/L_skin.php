@@ -116,8 +116,8 @@ class L_skin {
     function menu_sidebar()
     {
         $LevelUser = $_SESSION['sess_level'];
-        $file_json_menu_main	= file_get_contents('./src/json/main_menu.json');
-        $file_json_menu_sub		= file_get_contents('./src/json/sub_menu.json');
+        $file_json_menu_main	= file_get_contents(base_url('src/json/main_menu.json'));
+        $file_json_menu_sub		= file_get_contents(base_url('src/json/sub_menu.json'));
         $data_main_menu		= json_decode($file_json_menu_main,true);
         $data_sub_menu		= json_decode($file_json_menu_sub,true);
 
