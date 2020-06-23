@@ -9,7 +9,7 @@ class L_admin {
 		if($specialCharacters === TRUE){$chars .= "!_?=/&+,.";}
 		for($i=0;$i<$length; $i++){
 			$x = mt_rand(0, strlen($chars) -1);
-			$digits .= $chars{$x};
+			$digits .= $chars($x);
 		}
 		return $digits;
 	}
