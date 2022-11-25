@@ -42,7 +42,7 @@ class M_auth extends CI_Model {
 			$uri = $this->uri->segment(1).'/'.$this->uri->segment(2);
 			$LevelUser = $this->session->userdata('sess_level');
 			$query_menu = $this->db->query('SELECT id_menu FROM conf_menu WHERE status=1 AND sub=1 AND link="'.$uri.'" AND level LIKE "%'.$LevelUser.'%" LIMIT 1');
-			$query_sub = $this->db->query('SELECT id_submenu FROM conf_submenu WHERE status=1 AND link="'.$uri.'" AND level LIKE "%'.$LevelUser.'%" LIMIT 1');
+			$query_sub = $this->db->query('SELECT id_submenu FROM conf_submenu WHERE status=1 AND link="'.$uri.'" AND level LIKE "%"'.$LevelUser.'"%" LIMIT 1');
 			if($query_menu->num_rows() < 1) {
 				if($query_sub->num_rows() < 1) {
 					redirect(base_url());
@@ -76,8 +76,8 @@ class M_auth extends CI_Model {
     function menu_sidebar()
     {
         $LevelUser = $this->session->userdata('sess_level');
-        $query_menu = $this->db->query('SELECT * FROM conf_menu WHERE akses=1 AND status=1 AND level LIKE "%'.$LevelUser.'%" ORDER BY position ASC');
-        $query_sub = $this->db->query('SELECT * FROM conf_submenu WHERE status=1 AND level LIKE "%'.$LevelUser.'%" ORDER BY position ASC');
+        $query_menu = $this->db->query('SELECT * FROM conf_menu WHERE akses=1 AND status=1 AND level LIKE "%"'.$LevelUser.'"%" ORDER BY position ASC');
+        $query_sub = $this->db->query('SELECT * FROM conf_submenu WHERE status=1 AND level LIKE "%"'.$LevelUser.'"%" ORDER BY position ASC');
         if ($query_menu->num_rows() > 0)
         {
             foreach ($query_menu->result() as $menu)

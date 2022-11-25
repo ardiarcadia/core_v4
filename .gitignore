@@ -1,4 +1,3 @@
 src/json/**
 app/logs/**
 vendor/**
-db_core_v4.sql
